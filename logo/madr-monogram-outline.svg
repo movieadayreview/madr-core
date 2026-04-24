@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-label="MADR monogram (outline)">
+  <defs>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;display=swap');
+      .letter { font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-weight: 700; fill: #D4B254; }
+      .divider { stroke: #D4B254; stroke-width: 3; opacity: 0.3; }
+      .frame { stroke: #D4B254; stroke-width: 10; fill: none; opacity: 0.95; }
+    </style>
+  </defs>
+  <rect x="70" y="70" width="860" height="860" class="frame" rx="32"/>
+  <line x1="500" y1="140" x2="500" y2="860" class="divider"/>
+  <line x1="140" y1="500" x2="860" y2="500" class="divider"/>
+  <text x="250" y="260" text-anchor="middle" dominant-baseline="central" font-size="260" class="letter">M</text>
+  <text x="750" y="260" text-anchor="middle" dominant-baseline="central" font-size="260" class="letter">A</text>
+  <text x="250" y="740" text-anchor="middle" dominant-baseline="central" font-size="260" class="letter">D</text>
+  <text x="750" y="740" text-anchor="middle" dominant-baseline="central" font-size="260" class="letter">R</text>
+</svg>

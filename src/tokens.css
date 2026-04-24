@@ -1,0 +1,30 @@
+/**
+ * MADR brand tokens — CSS custom properties.
+ * Source of truth: @madr/core/src/tokens.ts.
+ * Consumed by madr-brand static HTML templates and the main app's global CSS.
+ */
+
+:root {
+  /* Core palette */
+  --madr-black: #0a0a0a;
+  --madr-charcoal: #1a1a1a;
+  --madr-gold: #d4b254;
+  --madr-gold-soft: #b8994a;
+  --madr-cream: #ede8dc;
+  --madr-cream-dim: rgba(237, 232, 220, 0.6);
+
+  /* Semantic */
+  --madr-hall-of-fame: #5ca86e;
+  --madr-hall-of-shame: #c24545;
+
+  /* Typography */
+  --madr-font-display: "Space Grotesk", system-ui, sans-serif;
+  --madr-font-mono: "Space Mono", ui-monospace, monospace;
+
+  /* Type scale (1080px reference — IG feed) */
+  --madr-hero: 120px;
+  --madr-title: 72px;
+  --madr-body: 32px;
+  --madr-label: 22px;
+  --madr-micro: 18px;
+}

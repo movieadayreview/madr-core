@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-label="MADR circular monogram">
+  <defs>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;display=swap');
+      .bg { fill: #0A0A0A; }
+      .letter { font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-weight: 700; fill: #D4B254; }
+      .frame { stroke: #D4B254; stroke-width: 8; fill: none; opacity: 0.95; }
+      .divider { stroke: #D4B254; stroke-width: 2; opacity: 0.22; }
+    </style>
+    <clipPath id="circle-clip">
+      <circle cx="500" cy="500" r="500"/>
+    </clipPath>
+  </defs>
+  <rect width="1000" height="1000" class="bg"/>
+  <g clip-path="url(#circle-clip)">
+    <line x1="500" y1="140" x2="500" y2="860" class="divider"/>
+    <line x1="140" y1="500" x2="860" y2="500" class="divider"/>
+  </g>
+  <circle cx="500" cy="500" r="440" class="frame"/>
+  <text x="320" y="340" text-anchor="middle" dominant-baseline="central" font-size="220" class="letter">M</text>
+  <text x="680" y="340" text-anchor="middle" dominant-baseline="central" font-size="220" class="letter">A</text>
+  <text x="320" y="660" text-anchor="middle" dominant-baseline="central" font-size="220" class="letter">D</text>
+  <text x="680" y="660" text-anchor="middle" dominant-baseline="central" font-size="220" class="letter">R</text>
+</svg>

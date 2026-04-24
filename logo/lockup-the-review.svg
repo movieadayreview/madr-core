@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 500" role="img" aria-label="MADR × The Review lockup">
+  <defs>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&amp;display=swap');
+      .bg { fill: #0A0A0A; }
+      .letter { font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-weight: 700; fill: #D4B254; }
+      .sub-light { font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-weight: 400; fill: #EDE8DC; letter-spacing: 0.35em; }
+      .sub-bold { font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif; font-weight: 700; fill: #EDE8DC; letter-spacing: 0.15em; }
+      .divider { stroke: #D4B254; stroke-width: 2; opacity: 0.3; }
+      .frame { stroke: #D4B254; stroke-width: 6; fill: none; opacity: 0.95; }
+      .cross { fill: #EDE8DC; opacity: 0.35; font-family: 'Space Grotesk', sans-serif; font-weight: 400; }
+    </style>
+  </defs>
+  <rect width="2400" height="500" class="bg"/>
+
+  <g transform="translate(160, 100)">
+    <rect x="0" y="0" width="300" height="300" class="frame" rx="16"/>
+    <line x1="150" y1="30" x2="150" y2="270" class="divider"/>
+    <line x1="30" y1="150" x2="270" y2="150" class="divider"/>
+    <text x="75" y="75" text-anchor="middle" dominant-baseline="central" font-size="90" class="letter">M</text>
+    <text x="225" y="75" text-anchor="middle" dominant-baseline="central" font-size="90" class="letter">A</text>
+    <text x="75" y="225" text-anchor="middle" dominant-baseline="central" font-size="90" class="letter">D</text>
+    <text x="225" y="225" text-anchor="middle" dominant-baseline="central" font-size="90" class="letter">R</text>
+  </g>
+
+  <text x="580" y="250" dominant-baseline="central" font-size="80" class="cross">×</text>
+
+  <g transform="translate(720, 120)">
+    <text x="0" y="70" dominant-baseline="central" font-size="64" class="sub-light">THE</text>
+    <text x="0" y="200" dominant-baseline="central" font-size="140" class="sub-bold">REVIEW</text>
+  </g>
+</svg>

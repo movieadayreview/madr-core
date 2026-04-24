@@ -1,0 +1,27 @@
+{
+  "name": "@madr/core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared design tokens, themes, composition defaults, voice schema, and logo assets for the MADR (Movie A Day Review) ecosystem.",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./tokens": "./src/tokens.ts",
+    "./themes": "./src/themes.ts",
+    "./compositions": "./src/compositions.ts",
+    "./voice": "./src/voice.ts",
+    "./tokens.css": "./src/tokens.css",
+    "./logo/*": "./logo/*"
+  },
+  "files": [
+    "src",
+    "logo"
+  ],
+  "peerDependencies": {
+    "zod": "^3.22.0"
+  },
+  "peerDependenciesMeta": {
+    "zod": { "optional": true }
+  }
+}
