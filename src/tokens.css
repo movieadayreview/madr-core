@@ -1,30 +1,42 @@
 /**
  * MADR brand tokens — CSS custom properties.
- * Source of truth: @madr/core/src/tokens.ts.
- * Consumed by madr-brand static HTML templates and the main app's global CSS.
+ * Source of truth: @madr/core.
+ * Consumed by madr-brand static templates (synced to madr-brand/tokens-core.css)
+ * and by any main-app CSS that wants to reference MADR colors.
  */
 
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap");
+
 :root {
-  /* Core palette */
+  /* Color */
   --madr-black: #0a0a0a;
   --madr-charcoal: #1a1a1a;
   --madr-gold: #d4b254;
   --madr-gold-soft: #b8994a;
+  --madr-gold-muted: rgba(212, 178, 84, 0.35);
   --madr-cream: #ede8dc;
   --madr-cream-dim: rgba(237, 232, 220, 0.6);
+  --madr-cream-muted: rgba(237, 232, 220, 0.55);
+  --madr-green: #5ca86e; /* Hall of Fame / recommended */
+  --madr-red: #c24545; /* Hall of Shame / not recommended */
 
-  /* Semantic */
-  --madr-hall-of-fame: #5ca86e;
-  --madr-hall-of-shame: #c24545;
-
-  /* Typography */
-  --madr-font-display: "Space Grotesk", system-ui, sans-serif;
+  /* Type */
+  --madr-font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --madr-font-mono: "Space Mono", ui-monospace, monospace;
 
-  /* Type scale (1080px reference — IG feed) */
-  --madr-hero: 120px;
-  --madr-title: 72px;
-  --madr-body: 32px;
-  --madr-label: 22px;
-  --madr-micro: 18px;
+  /* Scale (based on 1080px-wide IG post) */
+  --madr-size-hero: 120px;
+  --madr-size-title: 72px;
+  --madr-size-body: 32px;
+  --madr-size-label: 22px;
+  --madr-size-micro: 18px;
+
+  /* Radii */
+  --madr-radius-sm: 8px;
+  --madr-radius-md: 16px;
+  --madr-radius-lg: 28px;
+
+  /* Rhythm */
+  --madr-track-loose: 0.32em;
+  --madr-track-mid: 0.12em;
 }
