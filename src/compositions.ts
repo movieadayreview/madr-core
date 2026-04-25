@@ -67,7 +67,15 @@ export const VARIANT_DIMENSIONS: Record<
   vertical: { width: 1080, height: 1920 },
 };
 
-export const THEME_OPTIONS = ["launch", "editorial", "podcast"] as const;
+export const THEME_OPTIONS = [
+  "launch",
+  "editorial",
+  "podcast",
+  "noir",
+  "minimal",
+  "neon",
+  "vintage",
+] as const;
 
 export type OutroProps = {
   type: "qr" | "simple";
