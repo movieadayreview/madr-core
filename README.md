@@ -16,17 +16,26 @@ Single source of truth for the MADR brand system and Remotion composition metada
 
 ## Installing in a consumer
 
-Add a local file dependency to the consumer's `package.json`:
+Add a GitHub URL dependency to the consumer's `package.json`:
 
 ```json
 {
   "dependencies": {
-    "@madr/core": "file:../madr-core"
+    "@madr/core": "github:movieadayreview/madr-core"
   }
 }
 ```
 
-Then run `npm install` in the consumer. Re-run after editing `madr-core` source (or use `npm link` for live updates during development).
+Then run `npm install` in the consumer. This works in both local dev and CI/Vercel/CF Workers builds, since npm clones the public repo at install time.
+
+After editing `madr-core` and pushing to `main`, consumers pick up the change with another `npm install` (or `npm install @madr/core` to force-refresh that single package). For active local development with live edits, use `npm link`:
+
+```bash
+cd madr-core && npm link
+cd ../madr-trailers && npm link @madr/core
+```
+
+To pin a specific commit instead of tracking `main`, use `github:movieadayreview/madr-core#<sha>`.
 
 ## Why no build step
 
