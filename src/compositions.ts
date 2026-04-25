@@ -15,13 +15,19 @@ export type CompositionId =
   | "Teaser15"
   | "Trailer30"
   | "Trailer60"
-  | "Trailer60Short";
+  | "Trailer60Short"
+  | "TodaysReview"
+  | "QuoteCard"
+  | "Top5Countdown";
 
 export const COMPOSITION_LABELS: Record<CompositionId, string> = {
   Teaser15: "Teaser (15s)",
   Trailer30: "Trailer (30s)",
   Trailer60: "Trailer (60s)",
   Trailer60Short: "Trailer (60s flat, social)",
+  TodaysReview: "Today's Review (~16s)",
+  QuoteCard: "Quote Card (~9s)",
+  Top5Countdown: "Top 5 Countdown (~40s)",
 };
 
 export type Variant = "landscape" | "square" | "vertical";
@@ -49,6 +55,21 @@ export const VARIANT_COMPOSITIONS: Record<
     landscape: "Trailer60Short",
     square: "Trailer60ShortSquare",
     vertical: "Trailer60ShortVertical",
+  },
+  TodaysReview: {
+    landscape: "TodaysReview",
+    square: "TodaysReviewSquare",
+    vertical: "TodaysReviewVertical",
+  },
+  QuoteCard: {
+    landscape: "QuoteCard",
+    square: "QuoteCardSquare",
+    vertical: "QuoteCardVertical",
+  },
+  Top5Countdown: {
+    landscape: "Top5Countdown",
+    square: "Top5CountdownSquare",
+    vertical: "Top5CountdownVertical",
   },
 };
 
@@ -281,6 +302,92 @@ export const DEFAULTS: Record<CompositionId, Record<string, unknown>> = {
     },
     closer: { headline: "Watch. Rank. Discuss.", durationFrames: 180 },
     outro: { ...COMMON_OUTRO, durationFrames: 240 },
+    captions: [],
+  },
+
+  TodaysReview: {
+    theme: "launch" satisfies ThemeName,
+    grain: true,
+    vignette: true,
+    logoDurationFrames: 60,
+    movie: {
+      title: "Past Lives",
+      year: "2023",
+      posterUrl: "",
+      durationFrames: 150,
+    },
+    verdict: {
+      label: "Verdict",
+      rating: "9/10",
+      blurb:
+        "Quietly devastating. Greta Lee anchors a film about the lives we don't live.",
+      durationFrames: 180,
+    },
+    outro: { ...COMMON_OUTRO, durationFrames: 90 },
+    captions: [],
+  },
+
+  QuoteCard: {
+    theme: "launch" satisfies ThemeName,
+    grain: true,
+    vignette: true,
+    pullQuote: {
+      text: "The review I read every morning.",
+      attribution: "Reader",
+      durationFrames: 180,
+    },
+    outro: { ...COMMON_OUTRO, durationFrames: 90 },
+    captions: [],
+  },
+
+  Top5Countdown: {
+    theme: "launch" satisfies ThemeName,
+    grain: true,
+    vignette: true,
+    logoDurationFrames: 60,
+    intro: {
+      eyebrow: "This week",
+      headline: "Top 5 movies to watch",
+      durationFrames: 90,
+    },
+    items: [
+      {
+        rank: 5,
+        title: "Past Lives",
+        rating: "9/10",
+        blurb: "Quietly devastating.",
+        durationFrames: 150,
+      },
+      {
+        rank: 4,
+        title: "Anatomy of a Fall",
+        rating: "8.5/10",
+        blurb: "Courtroom thriller as marriage autopsy.",
+        durationFrames: 150,
+      },
+      {
+        rank: 3,
+        title: "Killers of the Flower Moon",
+        rating: "9/10",
+        blurb: "Scorsese's most patient film.",
+        durationFrames: 150,
+      },
+      {
+        rank: 2,
+        title: "Oppenheimer",
+        rating: "9.5/10",
+        blurb: "Nolan shoots physics like a heist.",
+        durationFrames: 150,
+      },
+      {
+        rank: 1,
+        title: "The Holdovers",
+        rating: "9/10",
+        blurb: "A quiet masterpiece.",
+        durationFrames: 180,
+      },
+    ],
+    outro: { ...COMMON_OUTRO, durationFrames: 120 },
     captions: [],
   },
 };
