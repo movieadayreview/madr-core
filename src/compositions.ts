@@ -88,6 +88,20 @@ export const VARIANT_DIMENSIONS: Record<
   vertical: { width: 1080, height: 1920 },
 };
 
+// Default frame to capture as the per-config thumbnail when the user hasn't
+// chosen one. Picked to land on a moment where the headline / hero element is
+// fully revealed for each composition. Override per-config via
+// remotion_configs.thumbnail_frame in the main app.
+export const COMPOSITION_THUMB_DEFAULT_FRAME: Record<CompositionId, number> = {
+  Teaser15: 240,        // mid-tagline, headline fully revealed
+  Trailer30: 270,       // mid-brand-beats
+  Trailer60: 540,       // mid-brand-beats
+  Trailer60Short: 540,  // mid-brand-beats
+  TodaysReview: 120,    // movie poster + title composed
+  QuoteCard: 90,        // quote fully revealed
+  Top5Countdown: 600,   // mid-countdown hero frame
+};
+
 export const THEME_OPTIONS = [
   "launch",
   "editorial",
