@@ -13,7 +13,7 @@ Shared design system + composition metadata for the MADR ecosystem. Pure data + 
 
 - `./tokens` — `BRAND` palette, `FONT` families, `FPS=30`
 - `./themes` — `THEMES` (7 presets: launch / editorial / podcast / noir / minimal / neon / vintage), `THEME_NAMES` (Zod enum source), `getTheme(name)`
-- `./compositions` — `CompositionId` union (7 templates), `VARIANT_COMPOSITIONS` (×3 variants each), `VARIANT_DIMENSIONS`, `COMPOSITION_LABELS`, `DEFAULTS` (programmatic seeds — must be kept in sync by hand with `madr-trailers/src/Root.tsx` defaultProps literals because Studio's Save-to-code requires inline literals there)
+- `./compositions` — `CompositionId` union (7 templates), `VARIANT_COMPOSITIONS` (×3 variants each), `VARIANT_DIMENSIONS`, `COMPOSITION_LABELS`, `DEFAULTS` (programmatic seeds — must be kept in sync by hand with `madr-trailers/src/Root.tsx` defaultProps literals because Studio's Save-to-code requires inline literals there), `COMPOSITION_THUMB_DEFAULT_FRAME` (per-composition fallback frame for thumbnail capture; main app reads this when `remotion_configs.thumbnail_frame` is null)
 - `./voice` — structured voice guide as data (no Zod runtime cost; consumers can validate against shape if they want)
 - `./tokens.css` — CSS custom-properties version, synced into `madr-brand/tokens-core.css` via `madr-brand/scripts/sync-tokens.mjs`
 - `./logo/*.svg` — monograms / wordmarks / lockups
